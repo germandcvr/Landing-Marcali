@@ -1,0 +1,96 @@
+<div class="flex items-center justify-end w-full gap-1.5 count-down-main text-primero">
+  <div class="timer">
+  <div
+  class="rounded-xl bg-segundo py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 aspect-square px-3">
+  <p
+    class="countdown-element days font-manrope font-extrabold text-4xl text-center">
+  </p>
+  <p class="text-lg font-manrope font-bold mt-1 text-center w-full">Días</p>
+  </div>
+  </div>
+  <div class="timer">
+  <div
+  class="rounded-xl bg-segundo py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 aspect-square px-3">
+  <p
+    class="countdown-element hours font-manrope font-extrabold text-4xl text-center">
+  </p>
+  <p class="text-lg font-manrope font-bold mt-1 text-center w-full">Horas</p>
+  </div>
+  </div>
+  <div class="timer">
+  <div
+  class="rounded-xl bg-segundo py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 aspect-square px-3">
+  <p
+    class="countdown-element minutes font-manrope font-extrabold text-4xl text-center">
+  </p>
+  <p class="text-lg font-manrope font-bold mt-1 text-center w-full">Minutos</p>
+  </div>
+  </div>
+  <!--
+  <div class="timer">
+  <div
+  class="rounded-xl bg-segundo py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 aspect-square px-3">
+  <p
+    class="countdown-element seconds font-manrope font-extrabold text-4xl text-center">
+  </p>
+  <p class="text-lg font-manrope font-bold mt-1 text-center w-full">Seconds</p>
+  </div>
+  </div> -->
+</div>               
+<script>
+    // count-down timer
+    let dest: number = new Date("nov 17, 2024 12:00:00").getTime();
+    let x: number = window.setInterval(function () {
+      let now: number = new Date().getTime();
+      let diff: number = dest - now;
+      
+      // Check if the countdown has reached zero or negative
+      if (diff <= 0) {
+      clearInterval(x); // Stop the countdown
+      return; // Exit the function
+      }
+      
+      let days: string | number = Math.floor(diff / (1000 * 60 * 60 * 24));
+      let hours: string | number = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes: string | number = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds: string | number = Math.floor((diff % (1000 * 60)) / 1000);
+      
+      if (days < 10) {
+      days = `0${days}`;
+      }
+      if (hours < 10) {
+      hours = `0${hours}`;
+      }
+      if (minutes < 10) {
+      minutes = `0${minutes}`;
+      }
+      // if (seconds < 10) {
+      // seconds = `0${seconds}`;
+      // }
+      
+      // Get elements by class name
+      let countdownElements: HTMLCollectionOf<Element> = document.getElementsByClassName("countdown-element");
+    
+      // Loop through the elements and update their content
+      for (let i = 0; i < countdownElements.length; i++) {
+      let className: string = countdownElements[i].classList[1]; // Get the second class name
+      switch (className) {
+        case "days":
+        countdownElements[i].innerHTML = days as string;
+        break;
+        case "hours":
+        countdownElements[i].innerHTML = hours as string;
+        break;
+        case "minutes":
+        countdownElements[i].innerHTML = minutes as string;
+        break;
+        // case "seconds":
+        // countdownElements[i].innerHTML = seconds as string;
+        // break;
+        default:
+        break;
+      }
+      }
+    }, 1000);
+</script>
+  

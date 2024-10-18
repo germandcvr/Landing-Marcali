@@ -1,0 +1,81 @@
+---
+import Contador from "../components/Contador.astro";
+---
+<main class="bg-primero"> 
+    <section class="bg-hero-car bg-right-top bg-contain bg-no-repeat">
+        <div class="hero-banner wrapper pt-20 pb-10 text-white text-center">
+
+            <div class="info">
+                <h1 class="leading-3 text-white relative mb-20">Hay quienes hacen las cosas y <strong class="block text-2xl">quienes las viven con</strong> <span class="text-border absolute text-6xl z-10 uppercase left-1/4 md:left-1/3">Pasión</span> <span class="text-fondo absolute text-6xl z-0 uppercase left-1/4 md:left-1/3">Pasión</span>
+                </h1>
+
+                <p class="p-4 pb-8 border-solid border-2 rounded-xl border-yellow-600 text-xl">*Compra tu vehniculo con nosotros y asegura hasta <strong>1 año de entretenimiento con</strong></p>
+                <p class="flex justify-center -mt-6">
+                    <img class="w-full max-w-48 bg-white rounded-lg" src="/logo-tuboleta.webp" alt="Tu Boleta">
+                </p>
+                <p class="flex justify-center pt-8">
+                    <img class="w-full max-w-32 md:max-w-48" src="/logo-salon-internacion.webp" alt="XVIII Salón internacional del automovil">
+                </p>
+            </div>
+
+            <img class="w-full max-w-32 md:max-w-56 logo" src="/logo-marcali.svg" alt="Logo Marcali">  
+
+            <div class="contador">
+                <p><strong>Del 06 al 17 de noviembre</strong></p>
+                <Contador />
+            </div>
+        </div>
+    </section>
+</main>
+<style>
+    .text-border {
+        color: #00004752;
+        text-shadow: 
+            -1px -1px 0 white,
+            1px -1px 0 white,
+            1px 1px 0 white,
+            -1px 1px 0 white;
+    }
+    .text-fondo {;
+        text-shadow: 0 0 5px #FFA500, 0 0 15px #FFA500, 0 0 20px #FFA500, 0 0 50px #FF4500, 0 0 80px #FF4500;
+    }
+
+    .hero-banner {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 0.4fr 1fr 0.5fr; 
+        gap: 10px 10px; 
+        grid-template-areas: 
+            "logo"
+            "info"
+            "contador"; 
+    }
+    .info { grid-area: info; }
+    .logo { 
+        grid-area: logo; 
+        justify-self: left;
+    }
+    .contador { 
+        grid-area: contador;
+        justify-self: center;
+        align-self: flex-end; 
+    }
+
+    @media (min-width: 768px) { 
+        .hero-banner {
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: 1fr 1fr; 
+            gap: 10px 10px; 
+            grid-template-areas: 
+                "info logo"
+                "info contador"; 
+        }
+        .logo { 
+            justify-self: end;
+        }
+        .contador { 
+            justify-self: end;
+            align-self: end; 
+        }
+    }
+</style>
