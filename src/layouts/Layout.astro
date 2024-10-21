@@ -15,8 +15,13 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/logo-marcali.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<!-- Required Core Stylesheet -->
+		<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+		<!-- Optional Theme Stylesheet -->
+		<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
 	</head>
-	<body>
+	<body class="bg-tercero">
 		<slot />
 	</body>
 </html>

@@ -1,5 +1,80 @@
-<section class="wrapper text-center">
-    <h2>Contenido destacado en el país</h2>
-    <p>2024-25 que podrán redimir los clientes de Marcali</p>
-    <p>Slide Imagenes</p>
+<section class="wrapper text-center py-16 text-primero">
+    <h2 class="font-extrabold text-3xl md:text-4xl">Contenido destacado en el país</h2>
+    <p class="text-xl">2024-25 que podrán redimir los clientes de Marcali</p>
+
+    <div class="glide mt-5">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide_slide">
+                <img class="object-cover rounded-2xl shadow-xl" src="/carrousel/post-1.webp" alt="">
+            </li>
+            <li class="glide_slide">
+                <img class="object-cover rounded-2xl shadow-xl" src="/carrousel/post-2.webp" alt="">
+            </li>
+            <li class="glide_slide">
+                <img class="object-cover rounded-2xl shadow-xl" src="/carrousel/post-3.webp" alt="">
+            </li>
+            <li class="glide_slide">
+                <img class="object-cover rounded-2xl shadow-xl" src="/carrousel/post-4.webp" alt="">
+            </li>
+            <li class="glide_slide">
+                <img class="object-cover rounded-2xl shadow-xl" src="/carrousel/post-5.webp" alt="">
+            </li>
+            <li class="glide_slide">
+                <img class="object-cover rounded-2xl shadow-xl" src="/carrousel/post-6.webp" alt="">
+            </li>
+            <li class="glide_slide">
+                <img class="object-cover rounded-2xl shadow-xl" src="/carrousel/post-7.webp" alt="">
+            </li>
+          </ul>
+        </div>
+
+        <div class="glide__bullets mt-5" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+            <button class="glide__bullet" data-glide-dir="=3"></button>
+            <button class="glide__bullet" data-glide-dir="=4"></button>
+            <button class="glide__bullet" data-glide-dir="=5"></button>
+            <button class="glide__bullet" data-glide-dir="=6"></button>
+          </div>
+      </div>
+    
 </section>
+
+<script>
+    import Glide from '@glidejs/glide'
+
+    var carrouselContenido =  new Glide('.glide', {
+        type: 'carousel',	
+        perView: 3,
+        gap: 15,
+        autoplay: 2000,
+        hoverpause: true,
+        dragThreshold: 120,
+        animationDuration: 800,
+        breakpoints: {
+            1024: {
+                perView: 2
+            },
+            600: {
+                perView: 1
+            }
+        }
+    })
+
+    carrouselContenido.mount()
+</script>
+
+<style>
+    .glide__bullets {
+        position: static;
+        transform: translateX(0);
+    }
+    .glide__bullet {
+        background-color: #00004787;
+    }
+    .glide__bullet--active {
+        background-color: #000047;
+    }
+</style>
