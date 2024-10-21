@@ -1,5 +1,46 @@
-<footer>
-    <div class="wrapper text-center">
+<footer class="bg-primero">
+    <div class="wrapper text-center text-white text-xl py-6 md:py-16 border-t-2 solid border-gray-600">
+
+        <div class="glide slider-marcas">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides py-5 flex items-center justify-center">
+                <img class="glide__slide object-contain max-h-11 md:max-h-12 lg:max-h-16 w-auto" src="/marcas/dodge.webp" alt="">
+                <img class="glide__slide object-contain max-h-11 md:max-h-12 lg:max-h-16 w-auto" src="/marcas/fiat.webp" alt="">
+                <img class="glide__slide object-contain max-h-11 md:max-h-12 lg:max-h-16 w-auto" src="/marcas/honda.webp" alt="">
+                <img class="glide__slide object-contain max-h-11 md:max-h-12 lg:max-h-16 w-auto" src="/marcas/jeep.webp" alt="">
+                <img class="glide__slide object-contain max-h-11 md:max-h-12 lg:max-h-16 w-auto" src="/marcas/movement.webp" alt="">
+                <img class="glide__slide object-contain max-h-11 md:max-h-12 lg:max-h-16 w-auto" src="/marcas/peugeot.webp" alt="">
+                <img class="glide__slide object-contain max-h-11 md:max-h-12 lg:max-h-16 w-auto" src="/marcas/ram.webp" alt="">
+                <img class="glide__slide object-contain max-h-11 md:max-h-12 lg:max-h-16 w-auto" src="/marcas/renault.webp" alt="">
+                <img class="glide__slide object-contain max-h-11 md:max-h-12 lg:max-h-16 w-auto" src="/marcas/volvo.webp" alt="">
+                <img class="glide__slide object-contain max-h-11 md:max-h-12 lg:max-h-16 w-auto" src="/marcas/usados.webp" alt="">
+              </ul>
+            </div>
+        </div>
+
         <a href="#">*Consulta términos y condiciones aquí</a>
     </div>
 </footer>
+<script>
+    import Glide from '@glidejs/glide'
+
+    var carrouselMarcas = new Glide('.slider-marcas', {
+        type: 'carousel',
+        perView: 10,
+        autoplay: 2000,
+        hoverpause: true,
+        breakpoints: {
+            1024: {
+                perView: 5
+            },
+            768: {
+                perView: 3
+            },
+            640: {
+                perView: 2
+            }
+        }
+    })
+    
+    carrouselMarcas.mount()
+</script>
