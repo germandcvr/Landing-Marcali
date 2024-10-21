@@ -10,6 +10,7 @@ export default {
 			},
 			backgroundImage: {
 				"hero-car": "url('/banner-hero-fondo.webp')",
+				"fondo-corferias": "url('/fondo-corferias.webp')",
 			}
 		},
 	},
