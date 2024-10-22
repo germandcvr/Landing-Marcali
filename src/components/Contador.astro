@@ -53,7 +53,7 @@
       let days: string | number = Math.floor(diff / (1000 * 60 * 60 * 24));
       let hours: string | number = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       let minutes: string | number = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      let seconds: string | number = Math.floor((diff % (1000 * 60)) / 1000);
+      // let seconds: string | number = Math.floor((diff % (1000 * 60)) / 1000);
       
       if (days < 10) {
       days = `0${days}`;
