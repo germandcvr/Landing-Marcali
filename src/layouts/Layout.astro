@@ -1,6 +1,7 @@
 ---
 import '@glidejs/glide/dist/css/glide.core.min.css';
 import '@glidejs/glide/dist/css/glide.theme.min.css';
+import '@fontsource-variable/montserrat';
 
 interface Props {
 	title: string;
@@ -19,7 +20,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-tercero">
+	<body class="bg-tercero font-NouvelR-Semibold">
 		<slot />
 	</body>
 </html>
@@ -31,5 +32,29 @@ const { title } = Astro.props;
 	/** Utilidades */
 	.wrapper {
 		@apply w-[90%] mx-auto overflow-hidden max-w-screen-xl;
+	}
+
+	@font-face {
+		font-family: 'Arial Rounded MT Bold';
+		font-display: swap;
+		src: url("/fonts/arial-rounded-mt-bold.woff") format("woff");
+	}
+
+	@font-face {
+		font-family: 'NouvelR Semibold';
+		font-display: swap;
+		src: url("/fonts/NouvelRSemibold.woff") format("woff");
+	}
+
+	@font-face {
+		font-family: 'NouvelR Bold';
+		font-display: swap;
+		src: url("/fonts/NouvelRBold.woff") format("woff");
+	}
+
+	@font-face {
+		font-family: 'NouvelR Extrabold';
+		font-display: swap;
+		src: url("/fonts/NouvelRExtrabold.woff") format("woff");
 	}
 </style>

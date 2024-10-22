@@ -3,6 +3,12 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			fontFamily: {
+				'Arial-Rounded': ['Arial Rounded MT Bold', 'sans-serif'],	
+				'NouvelR-Semibold': ['NouvelR Semibold', 'sans-serif'],	
+				'NouvelR-Bold': ['NouvelR Bold', 'sans-serif'],	
+				'NouvelR-Extrabold': ['NouvelR Extrabold', 'sans-serif'],	
+			},
 			colors: {
 				'primero': '#000047',
 				'segundo': '#ffdf5a',
