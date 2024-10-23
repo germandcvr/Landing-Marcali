@@ -1,0 +1,51 @@
+---
+import Title from "../components/Title.astro";
+---
+
+<section class="bg-primero py-16">
+    <div class="wrapper flex flex-col items-center">
+        <Title>Déjanos tus datos aquí:</Title>
+        <div class="w-full max-w-screen-lg flex items-center justify-center mt-10" id="zf_div_MIm8igMsn_x6j1sahm5lzI5V_RRC1HkPEjfIov4Jfo8"></div><script type="text/javascript">(function() {
+            try{
+            var f = document.createElement("iframe");
+            f.src = 'https://forms.zohopublic.com/grupored/form/MarcaliLPSalndelautomvil/formperma/MIm8igMsn_x6j1sahm5lzI5V_RRC1HkPEjfIov4Jfo8?zf_lang=es&zf_rszfm=1';
+            f.style.border="none";
+            f.style.height="1445px";
+            f.style.width="90%";
+            f.style.transition="all 0.5s ease";
+            f.setAttribute("aria-label", 'Marcali\x20\x7C\x20LP\x20\x7C\x20Sal\xF3n\x20del\x20autom\xF3vil');
+            
+            var d = document.getElementById("zf_div_MIm8igMsn_x6j1sahm5lzI5V_RRC1HkPEjfIov4Jfo8");
+            d.appendChild(f);
+            window.addEventListener('message', function (){
+            var evntData = event.data;
+            if( evntData && evntData.constructor == String ){
+            var zf_ifrm_data = evntData.split("|");
+            if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
+            var zf_perma = zf_ifrm_data[0];
+            var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
+            var iframe = document.getElementById("zf_div_MIm8igMsn_x6j1sahm5lzI5V_RRC1HkPEjfIov4Jfo8").getElementsByTagName("iframe")[0];
+            if ( (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
+            var prevIframeHeight = iframe.style.height;
+            var zf_tout = false;
+            if( zf_ifrm_data.length == 3 ) {
+            iframe.scrollIntoView();
+            zf_tout = true;
+            }
+            if ( prevIframeHeight != zf_ifrm_ht_nw ) {
+            if( zf_tout ) {
+            setTimeout(function(){
+            iframe.style.height = zf_ifrm_ht_nw;
+            },500);
+            } else {
+            iframe.style.height = zf_ifrm_ht_nw;
+            }
+            }
+            }
+            }
+            }
+            }, false);
+            }catch(e){}
+            })();</script>
+    </div>
+</section>
