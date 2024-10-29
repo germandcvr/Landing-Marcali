@@ -1,3 +1,36 @@
+---
+const IMAGENES = [
+    'toto',
+    'yeison-jimenez-cali',
+    'the-smashing-pumpkins',
+    'sting-3.0',
+    'cultura-profetica',
+    'bring-me-the-horizon',
+    'camilo-primera-fecha',
+    'camilo-aegunda-fecha',
+    'monster-truck',
+    'julieta-venegas',
+    'la-cantina-mas-grande',
+    'melendi',
+    'megaland',
+    'paloma-san-basilio',
+    'delirio-vera',
+    'iron-maiden',
+    'slipknot-primera-fecha',
+    'carnaval-de-barranquilla',
+    'core-2025',
+    'eliminatorias-colombia',
+    'miguel-mateos',
+    'silvestre-ocana',
+    'ruge',
+    'ritvales',
+    'delirio',
+    'joaquin-sabina',
+    'keane',
+    'slipknot-segunda-fecha',
+    'monsieur-perine'
+]
+---
 <section class="wrapper text-center py-16 text-primero">
     <h2 class="font-NouvelR-Bold text-3xl md:text-4xl">Contenido destacado en el país</h2>
     <p class="text-xl">2024-25 que podrán redimir los clientes de Marcali</p>
@@ -5,38 +38,22 @@
     <div class="glide mt-5">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides py-10">
-            <li class="glide_slide">
-                <img class="object-cover rounded-2xl shadow-xl md:max-h-64 lg:max-h-80 w-auto aspect-square" src="/carrousel/post-1.webp" alt="">
-            </li>
-            <li class="glide_slide">
-                <img class="object-cover rounded-2xl shadow-xl md:max-h-64 lg:max-h-80 w-auto aspect-square" src="/carrousel/post-2.webp" alt="">
-            </li>
-            <li class="glide_slide">
-                <img class="object-cover rounded-2xl shadow-xl md:max-h-64 lg:max-h-80 w-auto aspect-square" src="/carrousel/post-3.webp" alt="">
-            </li>
-            <li class="glide_slide">
-                <img class="object-cover rounded-2xl shadow-xl md:max-h-64 lg:max-h-80 w-auto aspect-square" src="/carrousel/post-4.webp" alt="">
-            </li>
-            <li class="glide_slide">
-                <img class="object-cover rounded-2xl shadow-xl md:max-h-64 lg:max-h-80 w-auto aspect-square" src="/carrousel/post-5.webp" alt="">
-            </li>
-            <li class="glide_slide">
-                <img class="object-cover rounded-2xl shadow-xl md:max-h-64 lg:max-h-80 w-auto aspect-square" src="/carrousel/post-6.webp" alt="">
-            </li>
-            <li class="glide_slide">
-                <img class="object-cover rounded-2xl shadow-xl md:max-h-64 lg:max-h-80 w-auto aspect-square" src="/carrousel/post-7.webp" alt="">
-            </li>
+            {
+                IMAGENES.map((imagen) => (
+                    <li class="glide_slide">
+                        <img class="object-cover rounded-2xl shadow-xl md:max-h-64 lg:max-h-80 w-auto aspect-square" src={`/carrousel/${imagen}.webp`} alt={imagen} >
+                    </li>
+                ))
+            }
           </ul>
         </div>
 
         <div class="glide__bullets mt-5" data-glide-el="controls[nav]">
-            <button class="glide__bullet" data-glide-dir="=0"></button>
-            <button class="glide__bullet" data-glide-dir="=1"></button>
-            <button class="glide__bullet" data-glide-dir="=2"></button>
-            <button class="glide__bullet" data-glide-dir="=3"></button>
-            <button class="glide__bullet" data-glide-dir="=4"></button>
-            <button class="glide__bullet" data-glide-dir="=5"></button>
-            <button class="glide__bullet" data-glide-dir="=6"></button>
+            {
+                IMAGENES.map((imagen, index) => (
+                    <button class="glide__bullet" data-glide-dir={`=${index}`}></button>
+                ))
+            }
           </div>
       </div>
     
