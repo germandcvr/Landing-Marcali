@@ -1,6 +1,7 @@
 ---
 import '@glidejs/glide/dist/css/glide.core.min.css';
 import '@glidejs/glide/dist/css/glide.theme.min.css';
+import TrakingZoho from './TrakingZoho.astro';
 
 interface Props {
 	title: string;
@@ -30,6 +31,8 @@ const { title } = Astro.props;
 	<body class="bg-tercero font-NouvelR-Semibold">
 		<slot />
 		<script type="text/javascript" src="https://app.carnow.com/plugin/EChayvo3d6nymi3Ds0JcuL081mCrnt2doFoFfrAt1iskrbqh.js"></script>
+
+		<TrakingZoho />
 	</body>
 
 	<!-- Google Tag Manager (noscript) -->
